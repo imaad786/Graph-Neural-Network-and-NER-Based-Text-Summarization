@@ -30,7 +30,7 @@ We present **GraphNER**, a novel **Graph Neural Network (GNN)** and **Named Enti
 2. **Efficiency and Accessibility**: Provide a summarization tool that operates with significantly lower computational demands than large language models (LLMs), making it accessible even in resource-constrained environments.
 3. **Performance and Contextuality**: Test and validate our framework’s ability to generate summaries that are both accurate and contextually aware, capturing key relationships and entities.
 
-## 🛠️ Methodology
+# 🛠️ Methodology
 
 Our approach integrates **spaCy's pre-trained NER** model with a carefully structured **GNN pipeline** to generate summaries from texts. The project follows a systematic process:
 
@@ -56,15 +56,60 @@ This workflow illustrates the Named Entity Recognition (NER) process. Text is pr
 
 This architectural diagram presents the end-to-end flow of the GraphNER summarization system. Starting from text preprocessing, the process involves tokenization, cleaning, NER tagging, and graph analysis using GNN algorithms. High-ranking sentences are then selected based on the graph analysis to generate the final summary.
 
-## 🔬 Evaluation & Testing
 
-These diagrams illustrate the full architecture of our GNN + NER approach, with details on the NER integration and graph construction process.
-
-## 🔬 Evaluation & Testing
+# 🔬 Evaluation & Testing
 
 We used the **CNN/Daily Mail dataset** and benchmarked our model with **ROUGE metrics** for accuracy and **user feedback** for readability. Our results show promising improvements in summary quality, efficiency, and contextual retention, with potential to compete with leading LLMs in specific scenarios.
 
-## 💡 Key Findings
+## Comparative Analysis
+
+### Comparison Against Previous Works
+
+A critical part of evaluating the effectiveness of our proposed summarization system is to compare its performance with that of existing approaches. We have selected several notable studies for comparison, with their results reported using the same ROUGE metrics on the same CNN/Daily Mail dataset for consistency.
+
+<div align="center">
+
+| **System**            | **ROUGE-1 F1** | **ROUGE-2 F1** |
+|-----------------------|----------------|-----------------|
+| Previous Work \[1\]   | 0.28           | 0.11           |
+| Previous Work \[2\]   | 0.21           | -              |
+| **Our Approach**      | **0.30**       | **0.12**       |
+
+</div>
+
+Our integrated approach demonstrates a better performance in comparison to the established benchmarks, suggesting that the integration of GNN and NER can contribute to the improvement of extractive text summarization.
+
+### Recall Scores Comparison
+
+We also compared recall scores to assess the comprehensiveness of the summaries generated.
+
+<div align="center">
+
+| **System**            | **ROUGE-1 Recall** | **ROUGE-2 Recall** |
+|-----------------------|--------------------|---------------------|
+| Previous Work \[1\]   | 0.48               | 0.17               |
+| **Our System**        | 0.46               | 0.18               |
+
+</div>
+
+The recall scores highlight the system's ability to include relevant content in the summaries, indicating its potential for practical applications where content coverage is crucial.
+
+### Comparison Against LLMs
+
+Our approach, which integrates Graph Neural Networks (GNN) and Named Entity Recognition (NER), offers a different approach than Large Language Models (LLMs), which can be more cost-effective in certain cases. Below is a performance comparison against selected LLMs, based on ROUGE metrics for both F1 scores and recall.
+
+<div align="center">
+
+| **Model**                 | **ROUGE-1 F1** | **ROUGE-2 F1** |
+|---------------------------|----------------|-----------------|
+| BERTSUM+Transformer       | 0.43           | 0.20           |
+| **Our Approach**          | 0.30           | 0.12           |
+
+</div>
+
+This table shows that while our approach may not achieve the same ROUGE F1 scores as some LLM-based models, it remains a viable and resource-efficient alternative for extractive summarization tasks.
+
+# 💡 Key Findings
 
 - **Balanced Performance**: Our model strikes a strong balance between precision and recall, ensuring comprehensiveness without redundancy.
 - **Efficiency Advantage**: Compared to LLMs, our GNN + NER approach offers significant resource savings, making it ideal for use cases where computational power is limited.
