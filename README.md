@@ -1,16 +1,30 @@
-# Graph Neural Network and NER-Based Text Summarization 🧠📜
+<div align="center">
+<h2>GraphNER : Graph Neural Network and NER-Based Text Summarization 🧠📜</h2>
 
-[![Paper on arXiv](https://img.shields.io/badge/arXiv-2301.12345v1-b31b1b)](https://arxiv.org/abs/2301.12345)  <!-- Replace with actual arXiv link -->
+[**Imaad Zaffar Khan**](https://github.com/imaad786)<sup>1*</sup> · [**Amaan Aijaz Sheikh**](https://github.com/AmaanAijaz)<sup>1*</sup> · [**Utkarsh Sinha**]<sup>1</sup>
 
-Welcome to the repository for our pioneering project on **Graph Neural Network (GNN) and Named Entity Recognition (NER)**-driven **text summarization**! This project addresses the challenge of distilling vast textual data into concise, contextually rich summaries without compromising core content or meaning. Using advanced GNNs and NER, we’ve crafted an innovative system that interprets and summarizes complex text more effectively than conventional methods.
+<sup>1</sup>University of Illinois at Urbana-Champaign
 
-## 🌟 Project Highlights
+*Equal Contribution
 
-### 🚀 The Motivation
+<a href="https://arxiv.org/abs/2402.05126"><img src='https://img.shields.io/badge/arXiv-GraphNER-red' alt='Paper PDF'></a>
 
-In an era where data is exploding in both volume and complexity, effective text summarization has become a vital tool across domains. Traditional summarization techniques struggle with large, nuanced data, often leading to information loss or redundancy. We aimed to create a robust, resource-efficient system that leverages **GNN's relational understanding** and **NER's focus on key entities** to achieve superior summarization.
+</div>
 
-### 🎯 Core Objectives
+# 🌟 Highlights
+
+- Our project introduces a **GNN-NER based model** for extractive text summarization.
+- **Graph Neural Networks (GNNs)** analyze relational data in text to capture complex structures, while **Named Entity Recognition (NER)** highlights key entities.
+- Our model offers **scalability and efficiency**, suitable for applications requiring high-speed, resource-efficient summarization.
+- Achieves **state-of-the-art** performance in information extraction and summarization.
+
+
+# 🚀 Introduction 
+
+We present **GraphNER**, a novel **Graph Neural Network (GNN)** and **Named Entity Recognition (NER)** model for efficient, context-rich text summarization. Through this unified framework, GraphNER integrates GNN to capture relationships within the text and NER to identify critical entities, yielding high-quality summaries that retain key information.
+
+
+# 🎯 Core Objectives
 
 1. **Explore the Power of GNN + NER**: Evaluate the integration of GNNs and NER for extractive summarization, assessing if this fusion delivers on its theoretical promises.
 2. **Efficiency and Accessibility**: Provide a summarization tool that operates with significantly lower computational demands than large language models (LLMs), making it accessible even in resource-constrained environments.
@@ -27,9 +41,22 @@ Our approach integrates **spaCy's pre-trained NER** model with a carefully struc
 
 ### Architecture & Diagrams
 
-![Architecture Overview](link_to_image_1) <!-- Replace with link to actual diagram image -->
-![NER Pipeline](link_to_image_2) <!-- Replace with link to actual diagram image -->
-![GNN Analysis Progression](link_to_image_3) <!-- Replace with link to actual diagram image -->
+### Diagram 1: Graph Construction Process
+![Nodes and Edges Creation](./images/GNN.jpg) 
+
+This diagram demonstrates the process of constructing the graph for text summarization. The nodes represent textual elements (such as sentences or entities), initially separated as "Text Nodes" and "NER Nodes." The final step creates edges based on relationships between nodes, forming a complete graph that the GNN can analyze.
+
+### Diagram 2: NER System Workflow
+![NER System Workflow](assets/images/NER.jpg)
+
+This workflow illustrates the Named Entity Recognition (NER) process. Text is processed to identify key entities, classifying them into categories such as persons, locations, and organizations. These identified entities become integral nodes within the graph structure, providing essential context for summarization.
+
+### Diagram 3: Overall System Architecture
+![System Architecture](./images/arch_diagram.jpg) 
+
+This architectural diagram presents the end-to-end flow of the GraphNER summarization system. Starting from text preprocessing, the process involves tokenization, cleaning, NER tagging, and graph analysis using GNN algorithms. High-ranking sentences are then selected based on the graph analysis to generate the final summary.
+
+## 🔬 Evaluation & Testing
 
 These diagrams illustrate the full architecture of our GNN + NER approach, with details on the NER integration and graph construction process.
 
@@ -55,45 +82,14 @@ We plan to extend this work by exploring:
 
 ---
 
-## 📚 Bibliography
+# Citing GraphNER
 
-To cite this work in LaTeX, use the following references:
+To cite GraphNER, use the following BibTeX entry:
 
 ```latex
-@article{kadriua2021extractive,
-  title={Extractive Approach For Text Summarization Using Graphs},
-  author={Kadriua, K. and Obradovica, M.},
-  journal={arXiv preprint arXiv:2106.10955},
-  year={2021}
-}
-
-@article{alshibly2023text,
-  title={Text Summarization Of News Articles Based On Named Entity Recognition Using SpaCy Library},
-  author={Alshibly, I. and Al-Shorfat, S. and Otair, M. and Shehab, M. and Tarawneh, O. and Daoud, M. S.},
-  journal={Research Square},
-  year={2023}
-}
-
-@article{hernandez2022language,
-  title={Language-independent Extractive Automatic Text Summarization Based on Automatic Keyword Extraction},
-  author={Hern{\'a}ndez-Casta{\~n}eda, A. and Garc{\'\i}a-Hern{\'a}ndez, R. A. and Ledeneva, Y. and Mill{\'a}n-Hern{\'a}ndez, C. E.},
-  journal={Computer Speech \& Language},
-  volume={71},
-  year={2022}
-}
-
-@article{verma2022fuzzy,
-  title={An Approach For Extractive Text Summarization Using Fuzzy Evolutionary And Clustering Algorithms},
-  author={Verma, P. and Verma, A. and Pal, S.},
-  journal={Applied Soft Computing},
-  volume={120},
-  pages={108670},
-  year={2022}
-}
-
-@article{liu2021bert,
-  title={Fine-tune BERT for Extractive Summarization},
-  author={Liu, Y.},
-  journal={arXiv preprint arXiv:1903.10318},
-  year={2021}
+@article{khan2024graphner,
+  title={Graph Neural Network and NER-Based Text Summarization},
+  author={Khan, Imaad Zaffar and Sheikh, Amaan Aijaz and Sinha, Utkarsh},
+  journal={arXiv preprint arXiv:2402.05126},
+  year={2024}
 }
