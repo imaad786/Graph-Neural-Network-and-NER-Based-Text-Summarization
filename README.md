@@ -47,7 +47,7 @@ Our approach integrates **spaCy's pre-trained NER** model with a carefully struc
 This diagram demonstrates the process of constructing the graph for text summarization. The nodes represent textual elements (such as sentences or entities), initially separated as "Text Nodes" and "NER Nodes." The final step creates edges based on relationships between nodes, forming a complete graph that the GNN can analyze.
 
 ### Diagram 2: NER System Workflow
-![NER System Workflow](assets/images/NER.jpg)
+![NER System Workflow](./images/NER.jpg)
 
 This workflow illustrates the Named Entity Recognition (NER) process. Text is processed to identify key entities, classifying them into categories such as persons, locations, and organizations. These identified entities become integral nodes within the graph structure, providing essential context for summarization.
 
